@@ -4,6 +4,7 @@ from src.sentiment import analyze_sentiment
 from src.word_count import count_words
 from src.sentence_count import count_sentences
 from src.make_text_uppercase import text_uppercase
+from src.sudification import sudification
 
 # The title
 st.title('Our simple NLP APP to practice GIT')
@@ -18,6 +19,7 @@ TOOLS = {
     "Number of words": count_words,
     "Number of sentences": count_sentences,
     "Sentiment Analysis": analyze_sentiment,
+    "Sudification": sudification,
 }
 
 selection: str|None = st.pills("Tools: ", list(TOOLS.keys()), selection_mode="single")
